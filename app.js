@@ -2,11 +2,18 @@ function cipher() {
   var userInput = document.getElementById('user-input');
 
   if (userInput === '' || userInput === Number){
-  	alert('Digite sua palavra! Use apenas letras!');
+    alert('Digite sua palavra! Use apenas letras!');
   } else {
-    userInput.split('');
-    console.log(userInput)
- //   for (i = 0; i <)
+    
+      var lettersArray = userInput.split('');
+      var lettersCodes = [];
+
+      for (i = 0; i < lettersArray.length; i++){
+        var code = userInput.charCodeAt([i]);
+        lettersCodes.push(code);
+      }
+
+      
   }
 }
 
