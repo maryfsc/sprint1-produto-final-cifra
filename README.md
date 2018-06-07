@@ -40,3 +40,43 @@ Cria-se a variável printMessage, que recebe o elemento HTML de id 'message'.
 A função retorna printMessage com uma mensagem no HTML contendo 'Sua mensagem é ' mais a varíavel encryptedMessage, seguido de '!'.
 
 Encerra-se a função.
+
+
+O código contém a função decipher(), que contém um parâmetro userWord.
+
+No controle de fluxo, verifica-se se userWord é uma string vazia. Caso true, retorna o alerta 'Digite sua palavra!'.
+
+Caso false, verifica-se por meio de um loop com o contador de 0 a 9, ou menor que 10, se userWord possui números. Se for encontrado um número maior que -1 usando indexOf, significa que a string possui números. Logo, exibe o alerta 'Digite somente letras!'.
+
+Dando prosseguimento à função, uma vez que contenha uma string somente com letras.
+
+Cria-se uma array vazia decipherLettersCodes.
+
+Usando um loop em userWord, cria-se uma variável decipherCode que recebe o código ASCII do elemento em questão, usando charCodeAt(). 
+decipherLettersCodes recebe esse código por meio de um push().
+
+Cria-se uma array vazia arrDecipherCodes. Criam-se as variáveis indefinidas decipherCodeNumber e decipherCode.
+
+Por meio de um loop, verifica-se se o código ASCII da posição atual de decipherLettersCodes está no range de maior ou igual a 65 ou menor ou igual a 90, obtendo assim a verificação se a letra é maiúscula. 
+
+	Caso true, decipherCodeNumber recebe o elemento no index atual de decipherLettersCodes - 7, para fazer com que a letra "volte" 7 posições no alfabeto.
+	Por meio de um if, se o resultado for menor que 65, acrescenta-se 26, para que retorne o código da letra que será a substituição.
+
+	decipherCode recebe String.fromCharCode recebendo o resultado das operações contido em decipherCodeNumber, para encontrar a letra que fará a substituição.
+
+	Por meio de um push(), arrDecipherCodes recebe a letra já encriptografada.
+
+Na outra condição, verifica-se se o código ASCII da posição atual de decipherLettersCodes está no range de maior ou igual a 97 ou menor ou igual a 122, obtendo assim a verificação se a letra é minúscula.
+
+	Caso true, decipherCodeNumber recebe o elemento no index atual de decipherLettersCodes - 7, para fazer com que a letra "volte" 7 posições no alfabeto.
+	Por meio de um if, se o resultado for menor que 97, acrescenta-se 26, para que retorne o código da letra que será a substituição.
+
+	decipherCode recebe String.fromCharCode recebendo o resultado das operações contido em decipherCodeNumber, para encontrar a letra que fará a substituição.
+
+	Por meio de um push(), arrDecipherCodes recebe a letra já encriptografada.
+
+Cria-se uma varíavel decipheredMessage, recebendo arrDecipherCodes, antes uma array de letras, agora unida por meio de join('').
+
+Retorna decipheredMessage, uma string com a mensagem original encriptografada agora descodificada.
+
+Encerra-se a função.
