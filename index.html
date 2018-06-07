@@ -9,11 +9,11 @@
 	<form>
 		<div>
 			<label>Digite a palavra a ser encriptografada:</label>
-			<input type="text" id="user-input">
+			<input id="user-input" autocomplete="off">
 		</div>
-		<button type="submit" onclick="cipher()">Enviar</button>
+		<button type="button" onclick="cipher()" return="false">Enviar</button>
 	</form>
-	<p id="message"></p>
+	<p><span id="message"></span></p>
   <script src="./app.js"></script>
 </body>
 </html>
