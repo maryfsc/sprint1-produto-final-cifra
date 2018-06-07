@@ -1,6 +1,9 @@
 # sprint1-produto-final-cifra
 Um dos produtos finais do Sprint 1 da Laboratória SP 2018-1. Cifra de César.
 
+
+![Fluxograma de encriptador de mensagem usando Cifra de César](./fluxogram.jpeg)
+
 No evento de clique no botão do formulário HTML, inicia a função JavaScript cipher().
 
 Variável userInput é criada, obtendo o valor do input de texto do usuário no formulário HTML.
