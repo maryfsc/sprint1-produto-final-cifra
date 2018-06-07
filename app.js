@@ -1,9 +1,16 @@
 function cipher() {
   var userInput = document.getElementById('user-input').value;
 
-  if (typeof userInput === 'number' || userInput === ''){
-    alert('Digite sua palavra usando apenas letras!');
-  } else {
+  if (userInput === ''){
+    alert('Digite sua palavra!');
+  } else { 
+      // tratando o input de números
+      for (a = 0; a < 10; a++){
+        if (userInput.indexOf(a) > -1){
+          alert('Digite somente ĺetras!');
+          return false;
+        }
+      }
 
       var lettersArray = userInput.split('');
       var lettersCodes = []; 
